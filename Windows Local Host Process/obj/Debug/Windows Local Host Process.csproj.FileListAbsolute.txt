@@ -1,0 +1,6 @@
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\Windows Local Host Process\bin\Debug\Windows Local Host Process.exe.config
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\Windows Local Host Process\bin\Debug\Windows Local Host Process.exe
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\Windows Local Host Process\bin\Debug\Windows Local Host Process.pdb
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\Windows Local Host Process\obj\Debug\Windows Local Host Process.exe
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\Windows Local Host Process\obj\Debug\Windows Local Host Process.pdb
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\Windows Local Host Process\obj\Debug\Windows Local Host Process.csprojResolveAssemblyReference.cache

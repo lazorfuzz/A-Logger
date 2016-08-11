@@ -1,0 +1,4 @@
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\Anti\bin\Debug\Anti.dll
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\Anti\bin\Debug\Anti.pdb
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\Anti\obj\Debug\Anti.dll
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\Anti\obj\Debug\Anti.pdb

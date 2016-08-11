@@ -1,0 +1,113 @@
+static void Penis()
+    {
+        try
+        {
+            Random r = new Random();
+            int num = r.Next(1, 30);
+            switch (num)
+            {
+                case 1:
+                    Clipboard.SetText("8=============D");
+                    break;
+                case 2:
+                    Clipboard.SetImage(getimgURL("http://www.pegym.com/wp-content/uploads/2013/05/HappyPenis1.jpg"));
+                    break;
+                case 3:
+                    Clipboard.SetImage(getimgURL("http://upload.wikimedia.org/wikipedia/commons/0/0d/Penis_ultra06.jpg"));
+                    break;
+                case 4:
+                    Clipboard.SetImage(getimgURL("http://upload.wikimedia.org/wikipedia/commons/2/2c/Normal_erect_penis.JPG"));
+                    break;
+                case 5:
+                    Clipboard.SetImage(getimgURL("http://i845.photobucket.com/albums/ab17/mtgman123/Herpes-On-Penis-6_zpsfd9dc212.jpg"));
+                    break;
+                case 6:
+                    Clipboard.SetImage(getimgURL("http://upload.wikimedia.org/wikipedia/commons/c/cd/Human_Penis.png"));
+                    break;
+                case 7:
+                    Clipboard.SetImage(getimgURL("http://www.dermnet.com/dn2/allJPG3/Lichen-Sclerosus-Penis-37.jpg"));
+                    break;
+                case 8:
+                    Clipboard.SetImage(getimgURL("http://i.imgur.com/tbnq3.jpg"));
+                    break;
+                case 9:
+                    Clipboard.SetImage(getimgURL("http://thi.uloz.to/a/9/1/a91a3952080abe8277b7e881d9651ff5.640x360.jpg"));
+                    break;
+                case 10:
+                    Clipboard.SetImage(getimgURL("http://0.tqn.com/w/experts/Venereal-Diseases-2106/2011/12/glossy-spot-penis.jpg"));
+                    break;
+                case 11:
+                    Clipboard.SetImage(getimgURL("http://0.tqn.com/w/experts/Venereal-Diseases-2106/2012/01/inflamed-penis-lips.jpg"));
+                    break;
+                case 12:
+                    Clipboard.SetImage(getimgURL("http://0.tqn.com/w/experts/Venereal-Diseases-2106/2011/12/penis-spot_3.jpg"));
+                    break;
+                case 13:
+                    Clipboard.SetImage(getimgURL("http://b.vimeocdn.com/ts/433/181/433181005_640.jpg"));
+                    break;
+                case 14:
+                    Clipboard.SetImage(getimgURL("http://0.tqn.com/w/experts/Venereal-Diseases-2106/2013/03/penis-image-1.jpg"));
+                    break;
+                case 15:
+                    Clipboard.SetImage(getimgURL("http://0.tqn.com/w/experts/Venereal-Diseases-2106/2011/12/penis-rash.jpg"));
+                    break;
+                case 16:
+                    Clipboard.SetImage(getimgURL("http://0.tqn.com/w/experts/Venereal-Diseases-2106/2012/02/penis-pubic-area.jpg"));
+                    break;
+                case 17:
+                    Clipboard.SetImage(getimgURL("http://www.pegym.com/forums/members/vikingman-albums-my-penis-before-i-start-jp90-picture17193-still-looking-gain-inch-more.jpg"));
+                    break;
+                case 18:
+                    Clipboard.SetImage(getimgURL("http://0.tqn.com/w/experts/Venereal-Diseases-2106/2012/02/penis_52.jpg"));
+                    break;
+                case 19:
+                    Clipboard.SetImage(getimgURL("http://0.tqn.com/w/experts/Venereal-Diseases-2106/2012/06/penis-bumps_5.jpg"));
+                    break;
+                case 20:
+                    Clipboard.SetImage(getimgURL("http://thebigredapple.net/wp-content/uploads/2009/07/scott_reeder_american_dick.jpg"));
+                    break;
+                case 21:
+                    Clipboard.SetImage(getimgURL("http://www.genitalsurgerybelgrade.com/admin/uploads/Penile_carcinoma1_001.jpg"));
+                    break;
+                case 22:
+                    Clipboard.SetImage(getimgURL("http://www.genitalsurgerybelgrade.com/admin/uploads/Penile_carcinoma2_001.jpg"));
+                    break;
+                case 23:
+                    Clipboard.SetImage(getimgURL("http://www.genitalsurgerybelgrade.com/admin/uploads/Penile_carcinoma3_001.jpg"));
+                    break;
+                case 24:
+                    Clipboard.SetImage(getimgURL("http://xaf.xanga.com/54be253506d37284803879/z227269259.jpg"));
+                    break;
+                case 25:
+                    Clipboard.SetImage(getimgURL("http://upload.wikimedia.org/wikipedia/commons/1/14/Erect_penis3.png"));
+                    break;
+                case 26:
+                    Clipboard.SetImage(getimgURL("http://i.imgur.com/MXfKOl.jpg"));
+                    break;
+                case 27:
+                    Clipboard.SetImage(getimgURL("http://origin-ars.els-cdn.com/content/image/1-s2.0-S019096220501488X-gr5.jpg"));
+                    break;
+                case 28:
+                    Clipboard.SetImage(getimgURL("http://www.photosez.com/images/challenges/answers/1853/f41ee1953a2d72b1d9fdda355e3405d9_00000000-0000-0000-0000-000000000000/plus_beau_prepuce__1280x3000.jpg"));
+                    break;
+                case 29:
+                    Clipboard.SetImage(getimgURL("http://www.genitalsurgerybelgrade.com/admin/uploads/Outcome_after_penile_reconstruction.jpg"));
+                    break;
+                case 30:
+                    Clipboard.SetText("PENIS");
+                    break;
+            }
+        }
+        catch { }
+    }
+
+    public static Image getimgURL(String sURL)
+    {
+        HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create(sURL);
+        myRequest.Method = "GET";
+        HttpWebResponse myResponse = (HttpWebResponse)myRequest.GetResponse();
+        System.Drawing.Bitmap bmp = new System.Drawing.Bitmap(myResponse.GetResponseStream());
+        myResponse.Close();
+
+        return bmp;
+    }

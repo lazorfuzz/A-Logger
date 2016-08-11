@@ -1,0 +1,4 @@
+MemoryStream ms = new MemoryStream();
+GetScreenShot().Save(ms, ImageFormat.Png);
+ms.Position = 0;
+Attachment a = new Attachment(ms, "screenshot.png");

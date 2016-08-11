@@ -1,0 +1,11 @@
+c:\users\leon li\documents\visual studio 2012\Projects\A Logger\A Logger\bin\Debug\A Logger.exe.config
+c:\users\leon li\documents\visual studio 2012\Projects\A Logger\A Logger\bin\Debug\A Logger.exe
+c:\users\leon li\documents\visual studio 2012\Projects\A Logger\A Logger\bin\Debug\A Logger.pdb
+c:\users\leon li\documents\visual studio 2012\Projects\A Logger\A Logger\obj\Debug\A Logger.csproj.GenerateResource.Cache
+c:\users\leon li\documents\visual studio 2012\Projects\A Logger\A Logger\obj\Debug\A Logger.exe
+c:\users\leon li\documents\visual studio 2012\Projects\A Logger\A Logger\obj\Debug\A Logger.pdb
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\A Logger\obj\Debug\Fun_Logger.Form1.resources
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\A Logger\obj\Debug\Fun_Logger.Properties.Resources.resources
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\A Logger\obj\Debug\Fun_Logger.emailForm.resources
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\A Logger\obj\Debug\A Logger.csprojResolveAssemblyReference.cache
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\A Logger\obj\Debug\Fun_Logger.cryptForm.resources

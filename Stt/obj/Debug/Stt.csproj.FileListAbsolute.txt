@@ -1,0 +1,5 @@
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\Stt\bin\Debug\Stt.dll
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\Stt\bin\Debug\Stt.pdb
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\Stt\obj\Debug\Stt.csprojResolveAssemblyReference.cache
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\Stt\obj\Debug\Stt.dll
+C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\Stt\obj\Debug\Stt.pdb

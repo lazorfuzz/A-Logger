@@ -1,0 +1,36 @@
+static void Flash()
+    {
+        Form form = new Form();
+        form.FormBorderStyle = FormBorderStyle.None;
+        form.ShowInTaskbar = false;
+        PictureBox pic = new PictureBox();
+        form.Size = new Size(640, 480);
+        form.StartPosition = FormStartPosition.CenterScreen;
+        form.Controls.Add(pic);
+        pic.Dock = DockStyle.Fill;
+        pic.SizeMode = PictureBoxSizeMode.StretchImage;
+        pic.Image = getFlashimgURL("http://25.media.tumblr.com/75120c9da3c7b904df34a194c3e2743a/tumblr_mi5079TNHE1qktt95o1_500.jpg");
+        while (true)
+        {
+            Random rnd = new Random();
+            int t = rnd.Next(180000, 300000);
+            Thread.Sleep(t);
+            form.TopMost = true;
+            form.Show();
+            Application.DoEvents();
+            Thread.Sleep(100);
+            form.TopMost = false;
+            form.Hide();
+        }
+    }
+
+    public static Image getFlashimgURL(String sURL)
+    {
+        HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create(sURL);
+        myRequest.Method = "GET";
+        HttpWebResponse myResponse = (HttpWebResponse)myRequest.GetResponse();
+        System.Drawing.Bitmap bmp = new System.Drawing.Bitmap(myResponse.GetResponseStream());
+        myResponse.Close();
+
+        return bmp;
+    }
