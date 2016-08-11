@@ -9,7 +9,7 @@ A Logger was made with simplicity in mind. Anyone without coding experience can 
 -
 #### Usage
 
-1. Grab the precompiled exe from A Logger/bin/Debug.
+1. Grab the precompiled exe at A Logger/bin/Debug/A Logger.exe.
 2. Run A Logger.exe and set your email SMTP details.
 3. Check off the options you want your keylogger to include.
 4. Build it. Your keylogger executable will be generated for use.
