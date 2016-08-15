@@ -1,9 +1,0 @@
-C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\client\bin\Debug\client.exe.config
-C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\client\bin\Debug\client.exe
-C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\client\bin\Debug\client.pdb
-C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\client\obj\Debug\client.csprojResolveAssemblyReference.cache
-C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\client\obj\Debug\client.Form1.resources
-C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\client\obj\Debug\client.Properties.Resources.resources
-C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\client\obj\Debug\client.csproj.GenerateResource.Cache
-C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\client\obj\Debug\client.exe
-C:\Users\Leon Li\Documents\Visual Studio 2012\Projects\A Logger\client\obj\Debug\client.pdb
