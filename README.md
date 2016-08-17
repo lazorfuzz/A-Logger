@@ -15,3 +15,6 @@ A Logger was made with simplicity in mind. Anyone without coding experience can 
 4. Build it. Your keylogger executable will be generated for use.
 
 A Logger sends logs via email. Be sure of your email server's SMTP port before building your exe. The default port in A Logger is preconfigured for Gmail.
+
+-
+The 'Ext Spoof' and 'Crypt' features don't work. This keylogger was made in 2013 and development discontinued before all features were fleshed out and foolproof. However, the base keylogger works along with all the other features.
