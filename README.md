@@ -4,6 +4,8 @@ Windows keylogger made in C#
 -
 #### About
 
+<img src='http://i.imgur.com/AKXC25L.png' />
+
 A Logger was made with simplicity in mind. Anyone without coding experience can build their own customized keylogger that works on Windows Vista, 7, 8-8.1, and 10.
 
 -
